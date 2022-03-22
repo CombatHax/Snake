@@ -1,0 +1,23 @@
+constmp=[0,0];
+constbd=[20,100,50,50];
+window.onmousemove=function(e){
+letr=cnv.getBoundingClientRect();
+mp[0]=e.clientX-r.left;
+mp[1]=e.clientY-r.top;
+}
+window.onmousedown=function(){
+if((mp[0]>=bd[0]&&mp[0]<=bd[0]+bd[2])&&(mp[1]>=bd[1]&&mp[1]<=bd[1]+bd[3])){
+letp=document.createElement('p');
+p.appendChild(document.createTextNode('YouPressedtheButton'));
+}
+}
+function draw(){
+ctx.beginPath();
+ctx.rect(bd[0],bd[1],bd[2],bd[3]);
+ctx.strokeStyle='#0';
+ctx.fillStyle='#FF';
+ctx.fill();
+ctx.stroke();
+window.requestAnimationFrame(draw);
+}
+draw();
